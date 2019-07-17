@@ -1,0 +1,9 @@
+GCC COMPILE
+Compile class into object:                  gcc -g -O -c foo.c
+Compile multiple classes into binary:       gcc -o app main.c foo.c
+Compile classes and objects into binary:    gcc -o app main.c foo.o
+
+GCC OPTIONS
+Include standard math library:      -lm
+Compile only assembly:              -S
+

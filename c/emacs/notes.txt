@@ -1,0 +1,5 @@
+EMACS NOTES
+
+File menu	F10
+Select text	Shift-Arrow Keys
+

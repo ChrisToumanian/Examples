@@ -1,0 +1,38 @@
+To assembly the program:
+$ as exit.s -o exit.o
+
+To link the file:
+$ ld exit.o -o exit
+
+To run peogram:
+$ ./exit
+
+To see return status after program runs:
+$ echo $?
+
+Instructions:
+movl source, dest		move to register
+int instruction			interrupt
+addl
+subl
+imull
+idivl
+
+x86 general-purpose registers:
+%ebx
+%ecx
+%edx
+%edi
+%esi
+
+x86 special-purpose registers:
+%ebp
+%esp
+%eip
+%eflags
+
+Types:
+.byte
+.int
+.long
+.ascii

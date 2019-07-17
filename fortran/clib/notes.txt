@@ -1,0 +1,63 @@
+Using a C library in Fortran:
+$ gfortran -ffree-form -c main.f
+$ gcc -c lib.c
+$ gfortran -o program main.o lib.o
+$ ./program
+
+Makefile for using C library in Fortran:
+CC=gfortran
+program: main.f90 math.c
+	$(CC) -o program main.f90 math.c -fno-underscoring
+
+Calling a Fortran routine from C:
+$ gcc -c main.c
+$ gfortran -ffree-form -c lib.f
+$ gcc -o program main.o lib.o -lgfortran
+$ ./program
+
+C Library:
+#include "math.h"
+int add_(int* a, int* b, int* c)
+{
+	(*c) = (*a) + (*b);
+	return 0;
+}
+
+Fortrain Using C Library:
+program callc
+    integer :: a=5, b=2, output, err
+    integer :: add
+    print *, "Fortran calling C"
+    print *, "a=",a,"b=",b
+    err = add(a,b,output)
+    print *, output
+end program callc
+
+C BINDING:
+program callc
+    use iso_c_binding
+    
+    type, bind(C) :: c_comp
+        integer :: a=5, b=2, output
+        integer (c_int) :: Add
+    end type
+
+    print *, "Fortran calling C"
+    print *, "a=",a,"b=",b
+    output = add(a,b)
+    print *, output
+end program callc
+
+Fortran Standard IO Write:
+program callc
+    integer :: a=5, b=2, output, add, subtract, err
+    write(*, "(A)") "Fortran calling C"
+    write(*, "(A,I0,A,I0)") "a=", a, ", b=", b
+    err = add(a, b, output)
+    write(*, "(I0)") output
+    err = subtract(a, b, output)
+    write(*, "(I0)") output
+end program callc
+
+Gfortran export assembly command - can be used to compile:
+$ gfortran -S main.f90

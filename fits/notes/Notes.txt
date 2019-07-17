@@ -1,0 +1,11 @@
+Compile CFITSIO program:
+gcc -o exampleprogram exampleprogram.c -L. -lcfitsio -lm -lnsl -lsocket
+
+Directory path example:
+gcc -o exampleprogram exampleprogram.c -L. -lcfitsio -lm -lnsl -L /chris/lib/happycoders
+
+lsocket / happycoders libsocket:
+sudo apt-get install happycoders-libsocket
+sudo apt-get install happycoders-libsocket-dev
+
+/usr/lib/libsocket.so

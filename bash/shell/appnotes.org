@@ -1,0 +1,103 @@
+* Application Commands
+$ compgen -c				List all commands
+$ sudo apt install <app>
+$ sudo apt-get install <app>
+$ ps -ef | grep myapp			Process status
+$ chmod +x test.sh			Grant app permission
+
+* Navigation Commands
+$ ls					List files in directory
+$ cd					Go to folder
+$ env					Set or print environment variables
+
+* View Commands
+$ more myfile.txt			Show contents of file
+$ tail myfile.txt			Show last line of file
+$ grep
+$ cat
+$ history				History of commands
+
+* Screen Commands
+$ screen -r <id>			View screen sessions
+$ ctrl+a, :sessionname NEWNAME		Rename screen session
+$ ctrl+a+d				Detach from screen session
+
+* System Monitoring Tools
+$ top					Processes and RAM
+$ htop					Processes and RAM
+$ glances				Processes, RAM, Temperature
+$ df					Display free disk space
+$ lsblk					List disks
+$ id					User info
+
+* Network Monitoring Tools
+$ netstat -a				Shows active sockets
+$ ifconfig -a				Show NIC configuration
+$ ip link show                          List network device names
+$ sudo iptraf-ng
+$ wireshark
+$ tshark -f 'tcp port 80 and http'	Console-based Wireshark to capture
+$ sudo dnstop -Q eno1			Begin monitoring DNS requests - 3rd level queries
+$ sudo dnstop -Q wlx8c3bad0a390b
+$ traceroute
+$ curl
+$ netcat
+$ dig
+$ ping
+$ iptables -S
+$ speedtest-cli
+
+$ iwconfig                               Check wireless devices using Aircrack-ng
+$ airmon-ng check kill
+$ sudo airmon-ng start wlx8c3bad0a390b
+$ iwconfig                               Get new wifi name
+
+$ sudo airodump-ng wlx8c3bad0a390b
+$ sudo airodump-ng wlx8c3bad0a390bmon
+$ sudo airodump-ng --bssid D4:05:98:EC:87:C0 -c 1 wlx8c3bad0a390bmon --write /tmp/handshake.cap
+$ sudo airodump-ng wlx8c3bad0a390bmon --write /tmp/allchan.cap
+
+$ sudo airodump-ng --bssid 28:F0:76:58:0D:6E -c 1 wlx8c3bad0a390bmon --write /tmp/apple.cap
+
+$ sudo tcpdump -qns 0 -A -r allchan.cap-01.cap
+$ sudo tcpdump -qns 0 -X -r allchan.cap-01.cap
+$ sudo tcpick -C -yP -r allchan.cap-01.cap
+
+$ tshark -r allchan.cap                  Read pcap data
+$ sudo tshark -f "udp port 53" -Y "dns.qry.type == 1 and dns.flags.response == 0" -i wlx8c3bad0a390b
+$ sudo tshark -i wlx8c3bad0a390b -Y http.request -T fields -e http.host -e http.user_agent -w cap.pcap
+$ sudo tshark -i wlx8c3bad0a390b -Y http.request -T fields -e http.host -e http.request.full_uri
+$ sudo tshark -i wlx8c3bad0a390b -Y http.request -T fields -e dns.qry.name
+
+* Social Media
+$ fb-messenger-cli			Facebook Messenger client
+$ oysttyer				Twitter client
+$ rtv					Reddit client
+
+* Compiler Commands
+$ java
+$ python
+$ gcc
+$ gfortran
+$ ruby
+$ lua
+$ make
+
+* SSH
+- SSH Tunneling
+- SCP (Secure Copy Protocol)
+  
+* Games
+$ dwarffortress
+
+* Fun Applications
+$ cowsay
+$ fortune
+$ hollywood
+$ cmatrix
+$ taskbook
+$ googler
+$ neofetch
+$ mapscii
+$ mc					Midnight Commander file browser
+$ curl wttr.in				Local weather reportxs
