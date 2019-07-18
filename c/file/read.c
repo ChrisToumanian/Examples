@@ -5,7 +5,7 @@ int main()
   FILE *file;
   char c;
   
-  file = fopen("file.txt", "r");
+  file = fopen("read.txt", "r");
   
   while (1)
   {
