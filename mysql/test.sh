@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #user=Chris
-#password=Waunuma64!
+#password=
 database=minecraft
 #mysql -u "$user" -p"$password" -D "$database" -e "SELECT email FROM users WHERE username='Pandazoic';" -sN >> out.txt
 
