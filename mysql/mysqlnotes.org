@@ -1,0 +1,69 @@
+MySQL Notes
+
+* Navigation
+** Log In
+$ sudo mysql
+
+** LIST
+LIST databases;
+
+** USE
+USE <database>;
+
+** SHOW
+SHOW tables;
+
+* Querying Data
+** SELECT
+The SELECT statement allows you to get data from tables. A table consists of rows and columns like a spreadsheet.
+The result of a SELECT statement is called a result set that is a list of rows, each consisting of the same number of columns.
+
+$ SELECT column1, column2 FROM table1 [INNER | LEFT | RIGHT] JOIN table2 ON conditions WHERE conditions GROUP BY column1 HAVING groupconditions ORDER BY column1 LIMIT offset, length;
+
+SELECT - followed by a list of columns, or an asterisk (*) to indicate that you want to return all columns.
+
+
+* Sorting Data
+
+
+* Filtering Data
+
+
+* Joining Tables
+
+
+* Grouping Data
+
+
+* Subqueries
+
+
+* Common Table Expressions
+
+
+* Set Operators
+
+
+* Modifying Data in MySQL
+
+
+* MySQL Transaction
+
+
+* Managing Databases and Tables
+
+
+* MySQL Data Types
+
+
+* MySQL Constraints
+
+
+* MySQL Globalization
+
+
+* MySQL Import & Export
+
+
+* Advanced Techniques
+
