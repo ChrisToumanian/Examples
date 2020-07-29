@@ -26,6 +26,11 @@ $ git add .				Stages new files and modifications, without deletions
 $ git add -u				Stages modifications and deletions, without new files
 $ git commit -m "<message>"		Commits modified file with a comment
 $ git push origin <branch>		Pushes code to a git branch
+
 $ git push 	  			Pushes code to current git branch
 $ git checkout <branch>			Switch to a different branch
 $ git pull origin <branch>		Pulls code from a git branch
+
+Download repository
+$ git init
+

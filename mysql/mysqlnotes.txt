@@ -1,20 +1,17 @@
 MySQL Notes
 
-* Navigation
-** Log In
+Navigation
+
+Log In
 $ sudo mysql
 
-** LIST
-LIST databases;
+List
+$ SHOW databases;
+$ USE <database>;
+$ SHOW tables;
 
-** USE
-USE <database>;
 
-** SHOW
-SHOW tables;
-
-* Querying Data
-** SELECT
+Querying Data
 The SELECT statement allows you to get data from tables. A table consists of rows and columns like a spreadsheet.
 The result of a SELECT statement is called a result set that is a list of rows, each consisting of the same number of columns.
 
@@ -23,47 +20,38 @@ $ SELECT column1, column2 FROM table1 [INNER | LEFT | RIGHT] JOIN table2 ON cond
 SELECT - followed by a list of columns, or an asterisk (*) to indicate that you want to return all columns.
 
 
-* Sorting Data
+Tables
+
+$ CREATE TABLE example ( id smallint unsigned not null auto_increment, name varchar(20) not null, constraint pk_example primary key (id) );
+
+$ INSERT INTO example ( id, name ) VALUES ( null, 'Sample data' );
 
 
-* Filtering Data
+Sorting Data
+
+Filtering Data
+
+Joining Tables
+
+Grouping Data
+
+Subqueries
+
+Set Operators
+
+Modifying Data in MySQL
+
+MySQL Transaction
+
+Managing Databases and Tables
+
+MySQL Data Types
 
 
-* Joining Tables
+MySQL Constraints
 
 
-* Grouping Data
+MySQL Globalization
 
 
-* Subqueries
-
-
-* Common Table Expressions
-
-
-* Set Operators
-
-
-* Modifying Data in MySQL
-
-
-* MySQL Transaction
-
-
-* Managing Databases and Tables
-
-
-* MySQL Data Types
-
-
-* MySQL Constraints
-
-
-* MySQL Globalization
-
-
-* MySQL Import & Export
-
-
-* Advanced Techniques
-
+MySQL Import & Export
