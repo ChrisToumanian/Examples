@@ -1,0 +1,8 @@
+Create a solution using the terminal:
+$ dotnet new sln -n "SlnName"
+
+Create a console application:
+$ dotnet new console -n "ConsoleProjectName"
+
+Run program:
+$ dotnet run
