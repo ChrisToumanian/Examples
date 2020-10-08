@@ -1,0 +1,28 @@
+1. Compile library source code into position-independent code (PIC), an object file:
+
+$ gcc -c -Wall -Werror -fpic foo.c
+
+2. Create a shared library from an object file
+
+$ gcc -shared -o libfoo.so foo.o
+
+3. Link with a shared library when compiling main.c
+
+$ gcc -L/home/<username>/foo -Wall -o test main.c -lfoo
+
+4. Make library available at runtime using LD_LIBRARY_PATH
+
+$ export LD_LIBRARY_PATH=/home/username/foo:$LD_LIBRARY_PATH
+$ ./test
+This is a shared library test...
+Hello, I am a shared library
+
+5. Using rpath
+
+$ unset LD_LIBRARY_PATH
+$ gcc -L/home/username/foo -Wl,-rpath=/home/username/foo -Wall -o test main.c -lfoo
+$ ./test
+This is a shared library test...
+Hello, I am a shared library
+
+

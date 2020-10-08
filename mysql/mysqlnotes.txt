@@ -4,6 +4,7 @@ Navigation
 
 Log In
 $ sudo mysql
+$ mysql -uroot -p
 
 List
 $ SHOW databases;
@@ -19,12 +20,42 @@ $ SELECT column1, column2 FROM table1 [INNER | LEFT | RIGHT] JOIN table2 ON cond
 
 SELECT - followed by a list of columns, or an asterisk (*) to indicate that you want to return all columns.
 
+$ select * from <table>
+
+
+Fields
+
+$ SELECT <field> from <table>;
+
 
 Tables
 
 $ CREATE TABLE example ( id smallint unsigned not null auto_increment, name varchar(20) not null, constraint pk_example primary key (id) );
 
 $ INSERT INTO example ( id, name ) VALUES ( null, 'Sample data' );
+
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+
+$ desc <table>		Shows description of fields
+
+$ ALTER TABLE table
+ADD [COLUMN] column_name column_definition [FIRST|AFTER existing_column];
+
+$ ALTER TABLE users ADD COLUMN password varchar(255) not null AFTER name;
+$ ALTER TABLE users DROP password
+
+Databases
+
+$ CREATE database <foo>;
+$ DROP database <foo>;
+
+Users
+
+$ create user '<username>'@'localhost' identified by '<password>;
+$ grant all on <table>.* to '<username>'@'localhost'
+$ grant all on <table>.* to '<username>'@'localhost' identified by '<password>';
+$ mysql -u<username> -p
 
 
 Sorting Data
@@ -47,11 +78,8 @@ Managing Databases and Tables
 
 MySQL Data Types
 
-
 MySQL Constraints
 
-
 MySQL Globalization
-
 
 MySQL Import & Export
