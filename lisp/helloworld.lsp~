@@ -1,3 +1,0 @@
-					; compile command:
-					; $ sbcl --script helloworld.lsp
-(format t "Hello, World!")
