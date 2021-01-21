@@ -23,7 +23,7 @@ username = ""
 
 def rolldice():
   dice = [0, 0, 0, 0]
-  matches = 0;
+  matches = 0
 
   time.sleep(0.4)
   
