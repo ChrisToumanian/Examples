@@ -103,7 +103,6 @@ void Deck::make_deck()
 			Card card;
 			card.suit = static_cast<Suit>(i);
 			card.rank = static_cast<Rank>(j);
-			//std::cout << to_string(card.suit);
 			cards.push_back(card);
 		}
 	}
